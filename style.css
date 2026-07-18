@@ -16,9 +16,7 @@ body{
 
     color:#222;
 
-    height:100vh;
-
-    overflow:hidden;
+    min-height:100vh;
 
 }
 
@@ -30,7 +28,7 @@ header{
 
     height:70px;
 
-    background:#ffffff;
+    background:#fff;
 
     border-bottom:1px solid #ddd;
 
@@ -95,16 +93,34 @@ header h1{
 }
 
 /* ==========================
-   LAYOUT
+   DESKTOP LAYOUT
 ========================== */
 
 .container{
 
-    display:grid;
-
-    grid-template-columns:320px 1fr;
+    margin-left:320px;
 
     height:calc(100vh - 70px);
+
+}
+
+main{
+
+    position:relative;
+
+    height:100%;
+
+    background:#eef1f4;
+
+}
+
+model-viewer{
+
+    width:100%;
+
+    height:100%;
+
+    background:#eef1f4;
 
 }
 
@@ -114,7 +130,17 @@ header h1{
 
 aside{
 
-    background:white;
+    position:fixed;
+
+    left:0;
+
+    top:70px;
+
+    width:320px;
+
+    height:calc(100vh - 70px);
+
+    background:#fff;
 
     border-right:1px solid #ddd;
 
@@ -138,23 +164,29 @@ aside::-webkit-scrollbar-thumb{
 
 }
 
-/* ==========================
+#list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}/* ==========================
    MODEL CARD
 ========================== */
 
 .model-card{
 
-    background:white;
+    background:#fff;
+
+    border:1px solid #ddd;
 
     border-radius:12px;
 
     overflow:hidden;
 
     cursor:pointer;
-
-    margin-bottom:18px;
-
-    border:1px solid #ddd;
 
     transition:.25s;
 
@@ -190,42 +222,20 @@ aside::-webkit-scrollbar-thumb{
 
     font-size:18px;
 
-    margin-bottom:5px;
+    margin-bottom:6px;
 
 }
 
 .card-info p{
 
-    color:#666;
-
     font-size:14px;
 
-}
-
-/* ==========================
-   VIEWER
-========================== */
-
-main{
-
-    position:relative;
-
-    background:#e8eaed;
-
-}
-
-model-viewer{
-
-    width:100%;
-
-    height:100%;
-
-    background:#eef1f4;
+    color:#666;
 
 }
 
 /* ==========================
-   DETAILS PANEL
+   DETAILS
 ========================== */
 
 #details{
@@ -252,13 +262,15 @@ model-viewer{
 
     margin-bottom:12px;
 
+    font-size:24px;
+
 }
 
 #details p{
 
     margin:8px 0;
 
-    line-height:1.5;
+    line-height:1.6;
 
 }
 
@@ -286,7 +298,7 @@ model-viewer{
 
     background:#2563eb;
 
-    color:white;
+    color:#fff;
 
     border:none;
 
@@ -307,22 +319,37 @@ model-viewer{
     background:#1d4ed8;
 
 }
-
 /* ==========================
-   RESPONSIVE
+   MOBILE RESPONSIVE
 ========================== */
 
-@media(max-width:900px){
+@media (max-width:900px){
+
+    body{
+
+        overflow-x:hidden;
+
+    }
 
     header{
-
-        flex-direction:column;
 
         height:auto;
 
         padding:15px;
 
+        flex-direction:column;
+
+        align-items:stretch;
+
         gap:15px;
+
+    }
+
+    header h1{
+
+        text-align:center;
+
+        font-size:26px;
 
     }
 
@@ -330,11 +357,17 @@ model-viewer{
 
         width:100%;
 
+        display:flex;
+
         flex-direction:column;
+
+        gap:10px;
 
     }
 
-    .header-controls input{
+    .header-controls input,
+
+    .header-controls select{
 
         width:100%;
 
@@ -342,21 +375,25 @@ model-viewer{
 
     .container{
 
-        display:block;
+        margin-left:0;
 
         height:auto;
 
     }
 
-    aside{
+    main{
 
-        height:280px;
+        height:65vh;
+
+        min-height:420px;
 
     }
 
-    main{
+    model-viewer{
 
-        height:70vh;
+        width:100%;
+
+        height:100%;
 
     }
 
@@ -364,38 +401,62 @@ model-viewer{
 
         position:relative;
 
+        right:auto;
+
+        bottom:auto;
+
         width:100%;
-
-        right:0;
-
-        bottom:0;
 
         border-radius:0;
 
         box-shadow:none;
 
+        margin:0;
+
+        padding:20px;
+
+        background:#fff;
+
     }
-    /* ==========================
-   Mobile Model List
+
+    #details h2{
+
+        font-size:24px;
+
+    }
+
+    #details p{
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================
+   MOBILE MODEL LIST
 ========================== */
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
     aside{
 
+        position:relative;
+
+        top:auto;
+        left:auto;
+
+        width:100%;
         height:auto;
 
-        overflow-x:auto;
-
-        overflow-y:hidden;
-
-        white-space:nowrap;
-
         border-right:none;
-
         border-top:1px solid #ddd;
 
         padding:15px;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        background:#fff;
 
     }
 
@@ -403,17 +464,23 @@ model-viewer{
 
         display:flex;
 
+        flex-direction:row;
+
         gap:15px;
+
+        width:max-content;
 
     }
 
     .model-card{
 
-        flex:0 0 180px;
+        width:170px;
 
-        width:180px;
+        min-width:170px;
 
-        margin-bottom:0;
+        margin:0;
+
+        flex-shrink:0;
 
     }
 
@@ -425,71 +492,16 @@ model-viewer{
 
     aside::-webkit-scrollbar{
 
-        height:20px;
-
-    }
-
-}
-/* ==========================
-   MOBILE HORIZONTAL MODEL LIST
-========================== */
-
-@media (max-width: 900px) {
-
-    /* Keep mobile layout */
-    .container{
-        display:flex;
-        flex-direction:column-reverse;
-        height:auto;
-    }
-
-    /* Model list becomes horizontal */
-    aside{
-
-        width:100%;
-        height:auto;
-
-        overflow-x:auto;
-        overflow-y:hidden;
-
-        border-top:1px solid #ddd;
-        border-right:none;
-
-        padding:15px;
-
-        background:#fff;
-    }
-
-    /* Horizontal cards */
-    #modelList{
-
-        display:flex;
-        flex-direction:row;
-
-        gap:15px;
-
-        width:max-content;
-    }
-
-    .model-card{
-
-        width:160px;
-        min-width:160px;
-
-        margin:0;
-    }
-
-    .model-card img{
-
-        height:110px;
-    }
-
-    /* Better scrolling */
-    aside::-webkit-scrollbar{
-
         height:8px;
+
     }
 
-}
+    aside::-webkit-scrollbar-thumb{
+
+        background:#bbb;
+
+        border-radius:20px;
+
+    }
 
 }
