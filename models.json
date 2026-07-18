@@ -1,0 +1,35 @@
+[
+   {
+        "name":"Modern Sofa",
+        "category":"Sofa",
+        "price":"₹24,999",
+        "brand":"WoodCraft",
+        "material":"Oak Wood, Steel, Leather",
+        "dimensions":"210 × 90 × 85 cm",
+        "description":"Modern premium sofa.",
+        "model":"models/sofa.glb",
+        "thumbnail":"thumbnails/sofa.jpg"
+    },
+
+    { "name":"Modern Chair",
+        "category":"Chair",
+        "price":"₹3,999",
+        "brand":"WoodCraft",
+        "material":"Steel & Leather",
+        "dimensions":"50 × 50 × 85 cm",
+        "description":"Modern premium Chair.",
+        "model": "models/chair.glb",
+        "thumbnail": "thumbnails/chair.jpg"
+    },
+
+    { "name":"Modern Table",
+        "category":"Table",
+        "price":"₹6,999",
+        "brand":"WoodCraft",
+        "material":"Oak Wood",
+        "dimensions":"180 × 100 × 60 cm",
+        "description":"Modern premium Table.",
+        "model": "models/table.glb",
+        "thumbnail": "thumbnails/table.jpg"
+    }
+]

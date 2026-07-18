@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture Viewer</title>
+
+    <!-- Model Viewer -->
+    <script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>Furniture Viewer</h1>
+
+        <div class="header-controls">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search furniture..."
+            >
+
+            <select id="category">
+
+                <option value="All">All Categories</option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="container">
+
+        <!-- ============ SIDEBAR ============ -->
+
+        <aside>
+
+            <div id="list">
+
+                <!-- Cards created by JavaScript -->
+
+            </div>
+
+        </aside>
+
+        <!-- ============ VIEWER ============ -->
+
+        <main>
+
+            <model-viewer
+
+                id="viewer"
+
+                src=""
+
+                alt="Furniture Model"
+
+                camera-controls
+
+                auto-rotate
+
+                ar
+
+                ar-modes="scene-viewer webxr quick-look"
+
+                shadow-intensity="1"
+
+                exposure="1"
+
+                environment-image="neutral"
+
+                loading="eager"
+
+                reveal="auto"
+
+                interaction-prompt="auto"
+
+            >
+
+                <button
+                    slot="ar-button"
+                    class="ar-button">
+
+                    📱 View in AR
+
+                </button>
+
+            </model-viewer>
+
+            <!-- ========= DETAILS ========= -->
+
+            <section id="details">
+
+                <h2 id="modelName">
+
+                    Select Furniture
+
+                </h2>
+
+                <p>
+
+                    <strong>Category:</strong>
+
+                    <span id="modelCategory">-</span>
+
+                </p>
+
+                <p>
+
+                    <strong>Material:</strong>
+
+                    <span id="modelMaterial">-</span>
+
+                </p>
+
+                <p>
+
+                    <strong>Dimensions:</strong>
+
+                    <span id="modelDimensions">-</span>
+
+                </p>
+
+                <p id="modelDescription">
+
+                    Select a furniture item to view its details.
+
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
