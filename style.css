@@ -376,97 +376,56 @@ model-viewer{
 
     }
     /* ==========================
-   MOBILE
+   Mobile Model List
 ========================== */
 
 @media (max-width: 900px) {
 
-    body{
-        overflow:auto;
-    }
-
-    header{
-
-        height:auto;
-
-        padding:15px;
-
-        flex-direction:column;
-
-        gap:15px;
-
-    }
-
-    .header-controls{
-
-        width:100%;
-
-        flex-direction:column;
-
-    }
-
-    .header-controls input,
-    .header-controls select{
-
-        width:100%;
-
-    }
-
-    .container{
-
-        display:flex;
-
-        flex-direction:column-reverse;
-
-        height:auto;
-
-    }
-
-    main{
-
-        height:65vh;
-
-        min-height:500px;
-
-    }
-
-    model-viewer{
-
-        height:100%;
-
-    }
-
-    #details{
-
-        position:relative;
-
-        right:0;
-
-        bottom:0;
-
-        width:100%;
-
-        border-radius:0;
-
-        box-shadow:none;
-
-        margin:0;
-
-    }
-
     aside{
 
-        height:260px;
+        height:auto;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        white-space:nowrap;
 
         border-right:none;
 
         border-top:1px solid #ddd;
 
+        padding:15px;
+
+    }
+
+    #list{
+
+        display:flex;
+
+        gap:15px;
+
+    }
+
+    .model-card{
+
+        flex:0 0 180px;
+
+        width:180px;
+
+        margin-bottom:0;
+
     }
 
     .model-card img{
 
-        height:140px;
+        height:120px;
+
+    }
+
+    aside::-webkit-scrollbar{
+
+        height:8px;
 
     }
 
