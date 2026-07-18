@@ -431,15 +431,63 @@ model-viewer{
 
 }
 /* ==========================
-   Mobile Extra Scroll Space
+   MOBILE HORIZONTAL MODEL LIST
 ========================== */
 
 @media (max-width: 900px) {
 
-    body::after{
-        content: "";
-        display: block;
-        height: 250px;
+    /* Keep mobile layout */
+    .container{
+        display:flex;
+        flex-direction:column-reverse;
+        height:auto;
+    }
+
+    /* Model list becomes horizontal */
+    aside{
+
+        width:100%;
+        height:auto;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        border-top:1px solid #ddd;
+        border-right:none;
+
+        padding:15px;
+
+        background:#fff;
+    }
+
+    /* Horizontal cards */
+    #modelList{
+
+        display:flex;
+        flex-direction:row;
+
+        gap:15px;
+
+        width:max-content;
+    }
+
+    .model-card{
+
+        width:160px;
+        min-width:160px;
+
+        margin:0;
+    }
+
+    .model-card img{
+
+        height:110px;
+    }
+
+    /* Better scrolling */
+    aside::-webkit-scrollbar{
+
+        height:8px;
     }
 
 }
