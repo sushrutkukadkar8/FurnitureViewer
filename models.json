@@ -7,7 +7,7 @@
         "material":"Oak Wood, Steel, Leather",
         "dimensions":"210 × 90 × 85 cm",
         "description":"Modern premium sofa.",
-        "model":"models/sofa.glb",
+        "model":"models/Sofa.glb",
         "thumbnail":"thumbnails/sofa.jpg"
     },
 
@@ -18,7 +18,7 @@
         "material":"Steel & Leather",
         "dimensions":"50 × 50 × 85 cm",
         "description":"Modern premium Chair.",
-        "model": "models/chair.glb",
+        "model": "models/Chair.glb",
         "thumbnail": "thumbnails/chair.jpg"
     },
 
@@ -29,7 +29,7 @@
         "material":"Oak Wood",
         "dimensions":"180 × 100 × 60 cm",
         "description":"Modern premium Table.",
-        "model": "models/table.glb",
+        "model": "models/Table.glb",
         "thumbnail": "thumbnails/table.jpg"
     }
 ]
