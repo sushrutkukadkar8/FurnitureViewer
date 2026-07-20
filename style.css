@@ -10,9 +10,9 @@
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Poppins',sans-serif;
 
-    background:#f3f4f6;
+    background:#f5f6fa;
 
     color:#222;
 
@@ -28,7 +28,7 @@ header{
 
     height:70px;
 
-    background:#fff;
+    background:#000000;
 
     border-bottom:1px solid #ddd;
 
@@ -46,7 +46,7 @@ header h1{
 
     font-size:28px;
 
-    color:#333;
+    color:#f3f3f3;
 
 }
 
@@ -110,7 +110,7 @@ main{
 
     height:100%;
 
-    background:#eef1f4;
+    background:#f2f2f3;
 
 }
 
@@ -120,7 +120,10 @@ model-viewer{
 
     height:100%;
 
-    background:#eef1f4;
+    background:linear-gradient( 180deg,
+               #f8fafc,
+             #e2e8f0
+);
 
 }
 
@@ -182,7 +185,7 @@ aside::-webkit-scrollbar-thumb{
 
     border:1px solid #ddd;
 
-    border-radius:12px;
+    border-radius:18px;
 
     overflow:hidden;
 
@@ -196,7 +199,7 @@ aside::-webkit-scrollbar-thumb{
 
     transform:translateY(-4px);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 }
 
@@ -249,6 +252,7 @@ aside::-webkit-scrollbar-thumb{
     width:320px;
 
     background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
 
     border-radius:12px;
 
