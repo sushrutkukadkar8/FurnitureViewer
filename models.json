@@ -42,5 +42,16 @@
         "description":"Modern Office Chair.",
         "model": "models/Chair2.glb",
         "thumbnail": "thumbnails/chair2.jpg"
+    },
+
+    { "name":"Wardrobe V1",
+        "category":"Wardrobe",
+        "price":"₹12,999",
+        "brand":"MetalCraft",
+        "material":"Metal, Fiber & Glass",
+        "dimensions":"100 × 80 × 210 cm",
+        "description":"Modern Wardrobe.",
+        "model": "models/Wardrobe1.glb",
+        "thumbnail": "thumbnails/Wardrobe1.jpg"
     }
 ]
