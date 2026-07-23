@@ -53,5 +53,16 @@
         "description":"Modern Wardrobe.",
         "model": "models/Wardrobe1.glb",
         "thumbnail": "thumbnails/Wardrobe1.jpg"
+    },
+
+    { "name":"Modern Confortable Chair",
+        "category":"Chair",
+        "price":"₹4,999",
+        "brand":"WoodCraft",
+        "material":"Cotton , Thick Plastic & Wood",
+        "dimensions":"70 × 70 × 85 cm",
+        "description":"Modern premium Chair.",
+        "model": "models/Chair3.glb",
+        "thumbnail": "thumbnails/chair3.jpg"
     }
 ]
